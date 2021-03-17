@@ -38,19 +38,20 @@
                 date
             </th>
         </tr>
-        <tr id="output_append"></tr>
-        <?php
-            require("php/JS_MySQL_home.php");
-            foreach($destination_list as $row){
-        ?>
-        <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['destination']; ?></td>
-            <td><?php echo $row['created_at']; ?></td>
-        </tr>
-        <?php
-        }
-        ?>
+        <tbody id="output_append">
+            <?php
+                require("php/JS_MySQL_home.php");
+                foreach($destination_list as $row){
+            ?>
+            <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['destination']; ?></td>
+                <td><?php echo $row['created_at']; ?></td>
+            </tr>
+            <?php
+            }
+            ?>
+        </tbody>
       </table>
     </div>
     <script src="js/random.js"></script>
