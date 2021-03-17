@@ -33,7 +33,7 @@ function onClick() {
       success: function (data) {
         $.each(JSON.parse(data), function (key, value) {
           // #all_show_result内にappendで追記していく
-          $("#data_output").append("<tr><td>" + value.id + "</td><td>" + value.destination + "</td><td>" + value.created_at + "</td></tr>");
+          $("#output_append").prepend("<tr><td>" + value.id + "</td><td>" + value.destination + "</td><td>" + value.created_at + "</td></tr>");
         });
         console.log("通信成功");
         console.log(data);
