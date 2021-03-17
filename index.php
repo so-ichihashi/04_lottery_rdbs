@@ -26,7 +26,7 @@
     </div>
     <div class="db_area">
       <h2 class="db_title">List of Places</h2>
-      <table>
+      <table id="data_output">
         <tr>
             <th>
                 id
@@ -38,8 +38,9 @@
                 date
             </th>
         </tr>
+        <tr id="output_append"></tr>
         <?php
-            require("JS_MySQL.php");
+            require("php/JS_MySQL_home.php");
             foreach($destination_list as $row){
         ?>
         <tr>
